@@ -22,10 +22,8 @@
     <input type="text" name="sal" id="sal"><br>
 
     <button onclick="addEmployee()">Add Employee</button>
-    <button>List Employee</button>
-
-
-
+    <button onclick="listEmployee()">List Employee</button>
+    <table id="tbl"></table>
 <script>
     function employee(code,name,dept,sal){
     this.code =code
@@ -48,6 +46,22 @@ function addEmployee(){
    employeesary.push(emp)
 
    console.log('employees ',employeesary)
+
+}
+
+function listEmployee(){
+
+    tbldata = ""
+
+    header="<tr><td>Code</td><td>Name</td><td>Department</td><td>Salary</td></tr>"
+    tbldata=tbldata+header
+
+    for(i=0;i<employeesary.length;i++){
+        emp = employeesary[i]
+        tbldata = tbldata+"<tr><td>"+emp.code+"</td><td>"+emp.name+"</td><td>"+emp.dept+"</td><td>"+emp.sal+"</td></tr>"
+
+    }
+    document.getElementById("tbl").innerHTML=tbldata
 
 }
 
