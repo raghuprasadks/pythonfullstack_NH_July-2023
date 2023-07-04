@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Master</title>
+</head>
+<body>
+ 
+    <h1>Employee Master</h1>
+
+    <label for="code">Code</label>
+    <input type="text" name="code" id="code"><br>
+
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name"><br>
+
+    <label for="dept">Department</label>
+    <input type="text" name="dept" id="dept"><br>
+
+    <label for="sal">Salary</label>
+    <input type="text" name="sal" id="sal"><br>
+
+    <button onclick="addEmployee()">Add Employee</button>
+    <button>List Employee</button>
+
+
+
+<script>
+    function employee(code,name,dept,sal){
+    this.code =code
+    this.name = name
+    this.dept = dept
+    this.sal = sal
+    this.info = function(){
+        console.log("Code - ",this.code," name - ",this.name)
+    }
+}
+
+employeesary=[]
+function addEmployee(){
+   code= document.getElementById("code").value
+   name= document.getElementById("name").value
+   dept= document.getElementById("dept").value
+   sal= document.getElementById("sal").value
+
+   emp = new employee(code,name,dept,sal)
+   employeesary.push(emp)
+
+   console.log('employees ',employeesary)
+
+}
+
+
+</script>
+
+</body>
+</html>
