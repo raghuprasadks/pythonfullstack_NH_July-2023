@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+
+    <label for="num1">Enter a number</label>
+    <input type="number" name="num1" id="num1">
+    <label for="oper">Enter an Operator(+,-,*,/) </label>
+    <input type="text" name="oper" id="oper">
+    <label for="num2">Enter another number</label>
+    <input type="number" name="num2" id="num2">
+    <button onclick="calculate()">Calculate</button>
+    <h1 id="result"></h1>
+
+    <script>
+        function calculate(){
+            console.log('calculate is called')
+            num1= parseInt(document.getElementById("num1").value)
+            oper= document.getElementById("oper").value
+            num2= parseInt(document.getElementById("num2").value)
+            console.log("num1 = ",num1,"  oper =",oper," num2 = ",num2)
+            if(oper=='+')
+                res = num1+num2
+            else if(oper=='-')
+                res = num1-num2
+            else if(oper=='*')
+                res = num1*num2
+            else if(oper=='/')
+                res = num1/num2
+            else
+                res = 'invalid operator'
+            
+            console.log('result ',res)
+            document.getElementById("result").innerHTML =res
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
