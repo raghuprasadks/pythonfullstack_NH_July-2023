@@ -83,4 +83,7 @@ Create a Header functional component
 JSX - Java Script and XML
 Embedding html inside java script
 
+create Content.js and Footer.js
+add it to App.js
+
 

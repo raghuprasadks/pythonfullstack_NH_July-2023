@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
+import Content from './components/Content';
 
 function App() {
   let course = "html,css,java script"
@@ -11,6 +12,7 @@ function App() {
       <h2>I am learning react</h2>
       <h2>I have learnt {courses.length} i,e {course}</h2>
       <Header/>
+      <Content/>
     </div>
   );
 }
