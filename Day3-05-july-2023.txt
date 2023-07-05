@@ -40,3 +40,47 @@ employees=[
 2. Display employees whose salary is greater than 30000
 3. Increment salary of every employee by 10 %
 using higher functions like filter/map
+
+
+
+React - Java script front end library
+
+developed by Facebook alias Meta
+
+HTML - >Dynamic
+Component based architecture
+RAD - Rapid Application Development
+Modularity
+SPA - Single Page Application Development
+
+Pre-requisites
+
+Node.js
+https://nodejs.org/en
+
+visual studio code
+
+
+
+postman
+
+Command to create a react app
+
+create react folder
+cd to react folder
+syntax
+npx create-react-app <appname>
+
+npx create-react-app reactbasics
+
+cd reactbasics
+npm start
+
+src->components->Header.js
+
+Create a Header functional component
+
+JSX - Java Script and XML
+Embedding html inside java script
+
+
