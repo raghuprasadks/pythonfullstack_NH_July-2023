@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lambda functions</title>
+</head>
+<body>
+    <h1>Lambda functions</h1>
+
+    <script>
+        function add(n1,n2){
+            return n1+n2
+        }
+
+        res=add(100,200)
+        console.log("function with a name add",res)
+
+        // var,let,const
+        var multiply=function (n1,n2){
+            return n1*n2
+        }
+
+        res=multiply(4,3)
+        console.log("function without a name-multiplication ",res)
+
+        subtract=(n1,n2)=>n1-n2
+        res=subtract(100,50)
+        console.log("lambda function ",res)
+
+        var si=function (p,r,t){
+            return (p*r*t)/100
+        }
+        res =si(10000,6,1)
+        console.log("si ",res)
+
+        silambda = (p,r,t)=>(p*r*t)/100
+
+        res =silambda(10000,6,1)
+        console.log("si lambda",res)
+
+
+        const evenOrOdd=(num)=>num%2==0?"Even":"Odd"
+
+        res = evenOrOdd(13)
+        console.log("evenOrOdd",res)
+        const pi=3.143
+        console.log('pi ',pi)
+        //pi=4.13
+        //console.log('pi after reassign ',pi)
+        
+        const marks=[20,30,40]
+        console.log("marks ",marks)
+        marks=[40,50,60]
+        console.log("marks after reassignment",marks)
+
+
+    </script>
+
+    
+</body>
+</html>

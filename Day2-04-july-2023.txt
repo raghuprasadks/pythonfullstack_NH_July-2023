@@ -1,0 +1,29 @@
+Agenda
+1. CSS - Cascading Style Sheet
+
+a. Inline styling - done
+b. Internal Styling - done
+c. External Styling - .css - done
+d. border,margin,padding
+c. block level/in-line
+converting
+Responsive Web Design
+
+Assignment:
+create ipl table 2023
+by applying necessary styles
+
+http://www.kaushalya.tech/
+2. Java Script
+
+Scripting programming language
+
+you can run it on browser
+
+Simple Calculator
+
+Enter a number <text box>
+Enter an operator <+/-/*/>
+Enter another number<text box>
+<calculate>
+

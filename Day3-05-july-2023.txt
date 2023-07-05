@@ -1,0 +1,6 @@
+Agenda:
+1. Java script unanimous functions(lambda)
+2. Higher order functions - map,filter,reduce
+3. Spread Operators,rest,destructuring
+3. AJAX
+4. React
