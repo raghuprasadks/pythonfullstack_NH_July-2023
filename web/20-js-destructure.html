@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+
+    <h1>Destructuring</h1>
+
+    <script>
+
+        console.log("array destructuring")
+        const vehicles=['Pleasure','Enfield','Swift','Innova']
+
+        const [scooter,bike,car,suv]=vehicles
+
+        console.log(car)
+
+        console.log("object destructuring")
+        employee={
+            code:1,
+            name:'kaushik',
+            dept:'IT',
+            desg:'Manager',
+            sal:150000
+
+        }
+        
+        function displaydesg({desg}){
+            console.log("your designation is ",desg)
+        }
+
+        displaydesg(employee)
+
+        const updvehicles=[...vehicles,"Chetak Electric Scooter"]
+        console.log("updated vehicle list",updvehicles)
+
+       const [scootertoday,...othervehicles]= vehicles
+
+       console.log("rest of the vehicles ",othervehicles)
+
+    </script>
+    
+</body>
+</html>
