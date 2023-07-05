@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Functions</title>
+</head>
+<body>
+
+    <h1>Higer Order functions</h1>
+
+    <script>
+
+        marks = [20,18,22,24,14,16,12,24,10]
+        marksbelow15=[]
+        for (i=0;i<marks.length;i++){
+            if (marks[i]<15)
+                marksbelow15.push(marks[i])
+        }
+        console.log("higher order function - filter")
+        console.log("marksbelow15 ",marksbelow15)
+        marksbelow15filter =marks.filter((mark)=>mark<15)
+        console.log("marksbelow15 with higher order function",marksbelow15filter)
+        console.log("higher order function map")
+        console.log("map ")
+        updmarks = marks.map((mark)=>mark+1)
+        console.log("original marks ",marks)
+        console.log("updated marks ",updmarks)
+        
+
+        
+
+    </script>
+    
+</body>
+</html>
