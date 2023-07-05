@@ -12,7 +12,7 @@
     <script>
 
         console.log("array destructuring")
-        const vehicles=['Pleasure','Enfield','Swift','Innova']
+        vehicles=['Pleasure','Enfield','Swift','Innova']
 
         const [scooter,bike,car,suv]=vehicles
 
@@ -25,7 +25,6 @@
             dept:'IT',
             desg:'Manager',
             sal:150000
-
         }
         
         function displaydesg({desg}){
@@ -36,6 +35,8 @@
 
         const updvehicles=[...vehicles,"Chetak Electric Scooter"]
         console.log("updated vehicle list",updvehicles)
+        vehicles = [...vehicles,"Chetak Electric Scooter"]
+        console.log("after update ",vehicles)
 
        const [scootertoday,...othervehicles]= vehicles
 
