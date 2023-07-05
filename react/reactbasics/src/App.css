@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.tblcls{
+  border: 2px solid blue;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+
+}

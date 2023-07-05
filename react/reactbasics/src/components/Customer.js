@@ -27,7 +27,7 @@ const Customer=()=>{
     ]
     return(
 
-        <div>
+        <div className="tblcls">
             <table>
                 <thead>
                     <tr>
