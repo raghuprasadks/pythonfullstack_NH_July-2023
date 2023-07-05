@@ -59,6 +59,26 @@
             }
         ]
 
+        console.log("Display employees belonging to IT department")
+
+        employeesofIT = employees.filter((emp)=>emp.dept=='IT') 
+        console.log(employeesofIT)
+
+        console.log("Display employees whose salary is greater than 30000 - without lamdba")
+
+        function empsalgt30000(emp){
+            return emp.sal>30000
+        }
+
+        employeesalgt30000 = employees.filter(empsalgt30000)
+        console.log(employeesalgt30000)
+        console.log('with lambda')
+        employeesalgt30000lambda = employees.filter((emp)=>emp.sal>30000)
+        console.log(employeesalgt30000lambda)
+        
+        
+
+
     </script>
     
 </body>
