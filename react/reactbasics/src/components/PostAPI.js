@@ -49,15 +49,15 @@ const PostAPI=()=>{
         <div>
             <h1>Post todos</h1>
             <form onSubmit={addTodo}>
-            <input value={userId} onChange={(e)=>setUserId(e.target.value)} placeholder="Enter User Id"></input><br/>
-            <input value={id} onChange={(e)=>setId(e.target.value)} placeholder="Enter Id"></input><br/>
-            <input value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Enter Title"></input><br/>
-            <input value={completed} onChange={(e)=>setCompleted(e.target.value)} placeholder="Enter Status"></input><br/>
+            <label>User Id</label><input value={userId} onChange={(e)=>setUserId(e.target.value)} placeholder="Enter User Id"></input><br/>
+            <label>Id</label><input value={id} onChange={(e)=>setId(e.target.value)} placeholder="Enter Id"></input><br/>
+            <label>Title</label><input value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Enter Title"></input><br/>
+            <label>Status</label><input value={completed} onChange={(e)=>setCompleted(e.target.value)} placeholder="Enter Status"></input><br/>
           
            <button type="submit">Add Todo</button>
             </form>           
         </div>
-        <div>
+        <div className="covidcls">
             <table>
                 <tr>
                     <th>User Id</th>
