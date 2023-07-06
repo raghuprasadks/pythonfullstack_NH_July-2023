@@ -9,6 +9,7 @@ const UseEffectDemo=()=>{
       .then(response => response.json())
       //.then(json => console.log(json))
       .then(json => setUsers(json))
+      .catch((reason)=>console.log("Error while fetching data"))
     },
     
     [])

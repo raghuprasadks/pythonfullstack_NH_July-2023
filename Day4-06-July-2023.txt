@@ -58,3 +58,13 @@ Enter an Operator <+,-,*,/>
 Enter another number <text box>
 <Calculate>
 100+20 =120
+
+postman
+
+download postman for windows
+
+
+install axios
+
+npm i axios
+
