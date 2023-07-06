@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Customer from './components/Customer';
 import Users from './components/Users';
 import CovidDashboard from './components/CovidDashboard';
+import SimpleInterest from './components/SimpleInterest';
 
 function App() {
   let course = "html,css,java script"
@@ -22,8 +23,11 @@ function App() {
       <Customer/>
       
       <Footer></Footer>
-       */}
       <CovidDashboard/>
+       */}
+
+       <SimpleInterest/>
+      
     </div>
   );
 }

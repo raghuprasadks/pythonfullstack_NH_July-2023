@@ -4,8 +4,8 @@ JSX - Java Script XML
 
 React Hooks
 useState()
-useEffect()
-useContect()
+useEffect() - WebServices
+useContext()
 
 CRUD Operation
 Web API
