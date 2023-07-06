@@ -29,7 +29,16 @@ const PostAPI=()=>{
           setTodos([...todos,response.data])
           console.log('todos updated ',todos);
         }); 
+        clearData()
 
+    }
+
+    const clearData=()=>{
+        setUserId('')
+        setId('')
+        setTitle('')
+        setCompleted(false)
+        
     }
     return(
         <>
@@ -47,6 +56,26 @@ const PostAPI=()=>{
           
            <button type="submit">Add Todo</button>
             </form>           
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>User Id</th>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                </tr>
+
+                {todos.map((todo)=><tr>
+
+                    <td>{todo.UserId}</td>
+                    <td>{todo.id}</td>
+                    <th>{todo.title}</th>
+                    <th>{todo.status}</th>
+                </tr>)}
+            
+            
+            </table>    
         </div>        
         </>
     )
