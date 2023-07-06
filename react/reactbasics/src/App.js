@@ -7,6 +7,7 @@ import Customer from './components/Customer';
 import Users from './components/Users';
 import CovidDashboard from './components/CovidDashboard';
 import SimpleInterest from './components/SimpleInterest';
+import UseEffectDemo from './components/UseEffectDemo';
 
 function App() {
   let course = "html,css,java script"
@@ -24,9 +25,12 @@ function App() {
       
       <Footer></Footer>
       <CovidDashboard/>
+      <SimpleInterest/>
        */}
 
-       <SimpleInterest/>
+       <UseEffectDemo/>
+
+       
       
     </div>
   );

@@ -24,7 +24,6 @@ const SimpleInterest=()=>{
             <input value={time} onChange={(e)=>setTime(e.target.value)} placeholder="Enter Time in years"></input><br/>
             <button onClick={CalculateSI}>Calculate</button>
             <h1>Simple Interest is {si}</h1>
-
         </div>
     )
 

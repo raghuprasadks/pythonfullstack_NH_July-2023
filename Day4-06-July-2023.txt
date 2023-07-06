@@ -5,6 +5,38 @@ JSX - Java Script XML
 React Hooks
 useState()
 useEffect() - WebServices
+jsonplaceholder 
+https://jsonplaceholder.typicode.com/
+
+
+JSON - Java Script Object Notation
+
+javascript object
+
+coviddata=[
+        {
+            "state":'Maharashtra',
+            "totalcases":8169873,
+            "active":79,
+            "discharged":8031279,
+            "deaths":148555,
+            "activeration":0.0,
+            "dischargeration":98.18,
+            "deathratio":1.82
+        },
+        {
+            state:'Kerala',
+            totalcases:8169873,
+            active:79,
+            discharged:8031279,
+            deaths:148555,
+            activeratio:0.0,
+            dischargeratio:98.18,
+            deathratio:1.82
+        }
+
+]
+
 useContext()
 
 CRUD Operation
@@ -16,3 +48,13 @@ Routing
 1. What is command to create a react project
 npx create-react-app <appname>
 npx create-react-app reactbasics
+
+
+
+MathCalculator
+
+Enter a number <text box>
+Enter an Operator <+,-,*,/>
+Enter another number <text box>
+<Calculate>
+100+20 =120
