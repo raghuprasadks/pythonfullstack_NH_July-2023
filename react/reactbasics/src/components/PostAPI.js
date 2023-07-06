@@ -68,7 +68,7 @@ const PostAPI=()=>{
 
                 {todos.map((todo)=><tr>
 
-                    <td>{todo.UserId}</td>
+                    <td>{todo.userId}</td>
                     <td>{todo.id}</td>
                     <th>{todo.title}</th>
                     <th>{todo.status}</th>
