@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import Customer from './components/Customer';
+import Users from './components/Users';
+import CovidDashboard from './components/CovidDashboard';
 
 function App() {
   let course = "html,css,java script"
@@ -15,10 +17,13 @@ function App() {
       <h2>I am learning react</h2>
       <h2>I have learnt {courses.length} i,e {course}</h2>
       <Content/>
-       */}
+      <Users/>
       <Header/>      
       <Customer/>
+      
       <Footer></Footer>
+       */}
+      <CovidDashboard/>
     </div>
   );
 }

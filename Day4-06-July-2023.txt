@@ -1,0 +1,18 @@
+Agenda:
+Components - functional ,class based 
+JSX - Java Script XML
+
+React Hooks
+useState()
+useEffect()
+useContect()
+
+CRUD Operation
+Web API
+FetchAPI
+Axios
+Routing
+
+1. What is command to create a react project
+npx create-react-app <appname>
+npx create-react-app reactbasics
