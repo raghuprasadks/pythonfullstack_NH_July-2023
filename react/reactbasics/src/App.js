@@ -9,6 +9,7 @@ import CovidDashboard from './components/CovidDashboard';
 import SimpleInterest from './components/SimpleInterest';
 import UseEffectDemo from './components/UseEffectDemo';
 import PostAPI from './components/PostAPI';
+import EmployeeMaster from './components/EmployeeMaster';
 
 function App() {
   let course = "html,css,java script"
@@ -28,9 +29,10 @@ function App() {
       <CovidDashboard/>
       <SimpleInterest/>
        <UseEffectDemo/>
+       <PostAPI/> 
        */}
 
-      <PostAPI/>       
+          <EmployeeMaster/>  
       
     </div>
   );

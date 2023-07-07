@@ -1,0 +1,4 @@
+Agenda
+1. React - CRUD
+2. Properties
+3. Flask - RestAPI
