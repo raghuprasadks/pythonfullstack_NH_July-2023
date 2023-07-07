@@ -1,4 +1,10 @@
 Agenda
-1. React - CRUD
-2. Properties
+1. React - CRUD - done
+2. Properties - done
 3. Flask - RestAPI
+4. Database SQLITE
+
+DBBrowser for SQLITE
+
+https://sqlitebrowser.org/dl/
+DB Browser for SQLite - Standard installer for 64-bit Windows
