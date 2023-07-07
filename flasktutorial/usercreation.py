@@ -4,7 +4,6 @@ def connect_to_db():
     conn = sqlite3.connect('database.db')
     return conn
 
-
 def create_db_table():
     try:
         conn = connect_to_db()
