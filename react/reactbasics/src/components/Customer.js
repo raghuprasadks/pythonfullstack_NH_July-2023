@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Customer=()=>{
-
+const Customer=(props)=>{
+    const customers =props.custlist
+/**
     const customers=[
         {
             id:1,
@@ -25,6 +26,7 @@ const Customer=()=>{
         }
 
     ]
+     */
     return(
 
         <div className="tblcls">

@@ -14,6 +14,29 @@ import EmployeeMaster from './components/EmployeeMaster';
 function App() {
   let course = "html,css,java script"
   let courses = ["html","css","java script"]
+  const customers=[
+    {
+        id:1,
+        name:'Balaji',
+        location:'Chennai'
+    },
+    {
+        id:2,
+        name:'Pawar',
+        location:'Mumbai'
+    },
+    {
+        id:3,
+        name:'Himanth Biswa Sarma',
+        location:'Gauhati'
+    },
+    {
+        id:4,
+        name:'Ajith Singh',
+        location:'Chandigarh'
+    }
+
+]
   return (
     <div className="App">
       {/**
@@ -30,9 +53,10 @@ function App() {
       <SimpleInterest/>
        <UseEffectDemo/>
        <PostAPI/> 
+       <EmployeeMaster/>  
        */}
-
-          <EmployeeMaster/>  
+          <Customer custlist={customers}></Customer>
+          
       
     </div>
   );
