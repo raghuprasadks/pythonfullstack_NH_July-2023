@@ -8,3 +8,56 @@ DBBrowser for SQLITE
 
 https://sqlitebrowser.org/dl/
 DB Browser for SQLite - Standard installer for 64-bit Windows
+
+create sqlitedb folder
+
+DB Browser - > New Database->Browse sqlitedb
+folder - demodb
+
+CREATE TABLE "customer" (
+	"id"	INTEGER NOT NULL,
+	"name"	TEXT NOT NULL,
+	"location"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+insert into customer(name,location) values 
+('ravi','bengaluru')
+insert into customer(name,location) values 
+('reshma','mysuru')
+insert into customer(name,location) values 
+('varma','delhi')
+
+
+w3schools sql
+
+1. Display customers of Germany
+SELECT * FROM customers where country ='Germany'
+2. Display total price of all
+products in product table
+SELECT sum(price) as totalprice FROM products
+3. Display maximum price among all
+products
+SELECT max(price) as maxprice FROM products
+4. Display average price of all
+products
+SELECT min(price) as minprice FROM products
+
+5. Display product name,category
+
+SELECT products.productname,categories.categoryname,products.price 
+from products,categories
+where products.categoryid = categories.categoryid
+
+Flask is a micro web framework written in python
+
+Create flasktutorial folder
+
+install flask
+pip install flask
+
+http://127.0.0.1:5000/ - end point
+http://127.0.0.1:5000/greet
+
+
+
