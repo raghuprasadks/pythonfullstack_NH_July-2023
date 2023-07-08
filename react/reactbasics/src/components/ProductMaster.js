@@ -21,8 +21,7 @@ const ProductMaster=()=>{
 
         axios.post(baseUrl,product)
         .then((response) => {
-            console.log("response data ",response.data)
-            //setProductlist([...productlist,response.data])
+            console.log("response data ",response.data)       
             listProduct()
           console.log(productlist);
         })
@@ -53,20 +52,15 @@ const ProductMaster=()=>{
     
 
     const deleteProduct=(code)=>{
-        console.log('code',code)
-       // const afterdelete = emplist.filter((emp)=>emp.code!=code)
-       // setEmplist(afterdelete)
-       axios.delete(baseUrl+'/'+code).then((response) => {
-        //setProductlist(response.data);
+        console.log('code',code)       
+       axios.delete(baseUrl+'/'+code).then((response) => {       
         listProduct()
     });
     }
 
     const updateProduct=(prodtoupdate)=>{
         console.log('product to update',prodtoupdate)
-        //const employeetobeupdated = emplist.filter((emp)=>emp.code!=code)
-        //setEmplist(afterdelete)
-        //setCode(prodtoupdate.code)
+        setCode(prodtoupdate.code)
         setName(prodtoupdate.name)
         setDesc(prodtoupdate.desc)
         setSupplier(prodtoupdate.supplier)
@@ -76,18 +70,16 @@ const ProductMaster=()=>{
     }
 
     const editProduct=()=>{
-        /**
-        const editedemployee = {code:code,name:name,dept:dept,desg:desg,sal:sal}
-        console.log("edit Employee",editedemployee)
+        const editedproduct = {code:code,name:name,desc:desc,supplier:supplier,price:price}
+        console.log("edit Employee",editedproduct)
         
-        const afteredit=emplist.map((emp)=>emp.code==editedemployee.code?editedemployee:emp)
-        console.log("after edit",afteredit)
-        
-        setEmplist(afteredit)
+        axios.put(baseUrl,editedproduct).then((response) => {
+            //setProductlist(response.data);
+            listProduct()
+        });
         clearData()
         setIsEdit(true) 
         setIsAdd(false)
-         */
     }
 
     const productlistfordisplay=productlist.map((prod)=><tr key={prod.code}>
