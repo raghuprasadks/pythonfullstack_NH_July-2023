@@ -11,6 +11,7 @@ import UseEffectDemo from './components/UseEffectDemo';
 import PostAPI from './components/PostAPI';
 import EmployeeMaster from './components/EmployeeMaster';
 import UserManagement from './components/UserManagement';
+import ProductMaster from './components/ProductMaster';
 
 function App() {
   let course = "html,css,java script"
@@ -55,10 +56,11 @@ function App() {
        <UseEffectDemo/>
        <PostAPI/> 
        <EmployeeMaster/> 
-       <Customer custlist={customers}></Customer> 
+       <Customer custlist={customers}></Customer>
+       <UserManagement/>  
        */}
-          
-          <UserManagement/>         
+          <ProductMaster/>
+                  
       
     </div>
   );
