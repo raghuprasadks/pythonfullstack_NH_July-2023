@@ -28,4 +28,15 @@ api/product/<code> - getting a specific product
 api/product put method to update a product
 api/product/<code> delete a specific product
 
+step 1-> create elearning folder
+step 2 - > cd elearning
+npx create-react-app frontend
+elearning->frontend
+cd frontend
+npm i react-router-dom
+
+
+elearning->api
+
+
 1. Install Flask,Flask-cors
