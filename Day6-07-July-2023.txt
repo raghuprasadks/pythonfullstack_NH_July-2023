@@ -27,3 +27,5 @@ api/product - get (getting all records)
 api/product/<code> - getting a specific product
 api/product put method to update a product
 api/product/<code> delete a specific product
+
+1. Install Flask,Flask-cors
