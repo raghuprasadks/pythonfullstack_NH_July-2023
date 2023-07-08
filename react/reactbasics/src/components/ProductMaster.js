@@ -22,7 +22,8 @@ const ProductMaster=()=>{
         axios.post(baseUrl,product)
         .then((response) => {
             console.log("response data ",response.data)
-            setProductlist([...productlist,response.data])
+            //setProductlist([...productlist,response.data])
+            listProduct()
           console.log(productlist);
         })
        
@@ -36,6 +37,20 @@ const ProductMaster=()=>{
         setSupplier('')
         setPrice('')        
     }
+
+    const listProduct=()=>{
+        axios.get(baseUrl).then((response) => {
+            setProductlist(response.data);
+        });
+    }
+
+
+    useEffect(() => {
+        axios.get(baseUrl).then((response) => {
+            setProductlist(response.data);
+        });
+      }, []);
+    
     /**
     const deleteEmployee=(code)=>{
         console.log('code',code)
@@ -68,17 +83,16 @@ const ProductMaster=()=>{
         setIsEdit(true) 
         setIsAdd(false)
     }
-
-    const emplistfordisplay=emplist.map((emp)=><tr key={emp.code}>
-        <td>{emp.code}</td>
-        <td>{emp.name}</td>
-        <td>{emp.dept}</td>
-        <td>{emp.desg}</td>
-        <td>{emp.sal}</td>
-        <td><button onClick={()=>deleteEmployee(emp.code)} >Delete</button></td>
-        <td><button onClick={()=>updateEmployee(emp)}>Update</button></td>
+    */
+    const productlistfordisplay=productlist.map((prod)=><tr key={prod.code}>
+        <td>{prod.code}</td>
+        <td>{prod.name}</td>
+        <td>{prod.desc}</td>
+        <td>{prod.supplier}</td>
+        <td>{prod.price}</td>
+        
     </tr>)
- */
+ 
     return(
         <div>
         <div>
@@ -101,6 +115,7 @@ const ProductMaster=()=>{
                     <th>Supplier</th>
                     <th>Price</th>
                 </tr>
+                {productlistfordisplay}
                 
             </table>
         </div>
