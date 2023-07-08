@@ -51,27 +51,32 @@ const ProductMaster=()=>{
         });
       }, []);
     
-    /**
-    const deleteEmployee=(code)=>{
+
+    const deleteProduct=(code)=>{
         console.log('code',code)
-        const afterdelete = emplist.filter((emp)=>emp.code!=code)
-        setEmplist(afterdelete)
+       // const afterdelete = emplist.filter((emp)=>emp.code!=code)
+       // setEmplist(afterdelete)
+       axios.delete(baseUrl+'/'+code).then((response) => {
+        //setProductlist(response.data);
+        listProduct()
+    });
     }
 
-    const updateEmployee=(emptoupdate)=>{
-        console.log('emp to update',emptoupdate)
+    const updateProduct=(prodtoupdate)=>{
+        console.log('product to update',prodtoupdate)
         //const employeetobeupdated = emplist.filter((emp)=>emp.code!=code)
         //setEmplist(afterdelete)
-        setCode(emptoupdate.code)
-        setName(emptoupdate.name)
-        setDept(emptoupdate.dept)
-        setDesg(emptoupdate.desg)
-        setSal(emptoupdate.sal)  
+        //setCode(prodtoupdate.code)
+        setName(prodtoupdate.name)
+        setDesc(prodtoupdate.desc)
+        setSupplier(prodtoupdate.supplier)
+        setPrice(prodtoupdate.price)  
         setIsEdit(false) 
         setIsAdd(true)
     }
 
-    const editEmployee=()=>{
+    const editProduct=()=>{
+        /**
         const editedemployee = {code:code,name:name,dept:dept,desg:desg,sal:sal}
         console.log("edit Employee",editedemployee)
         
@@ -82,30 +87,35 @@ const ProductMaster=()=>{
         clearData()
         setIsEdit(true) 
         setIsAdd(false)
+         */
     }
-    */
+
     const productlistfordisplay=productlist.map((prod)=><tr key={prod.code}>
         <td>{prod.code}</td>
         <td>{prod.name}</td>
         <td>{prod.desc}</td>
         <td>{prod.supplier}</td>
         <td>{prod.price}</td>
+        <td><button onClick={()=>deleteProduct(prod.code)} >Delete</button></td>
+        <td><button onClick={()=>updateProduct(prod)}>Update</button></td>
+
         
     </tr>)
  
     return(
         <div>
-        <div>
+        <div className='tblcls'>
             <h1>Add Product</h1>
             <input value={name} onChange={(e)=>setName(e.target.value)} placeholder='Enter Name'></input><br/>
             <input value={desc} onChange={(e)=>setDesc(e.target.value)} placeholder='Enter Description'></input><br/>
             <input value={supplier} onChange={(e)=>setSupplier(e.target.value)} placeholder='Enter Supplier'></input><br/>
             <input value={price} onChange={(e)=>setPrice(e.target.value)} placeholder='Enter Price'></input><br/>
             <button onClick={addProduct} disabled={isAdd}>Add Product</button>
-          
+            <button onClick={editProduct} disabled={isEdit}>Edit Product</button>
+
 
         </div>
-        <div>
+        <div className='tblcls'>
             <h1>Product List</h1>
             <table>
                 <tr>
