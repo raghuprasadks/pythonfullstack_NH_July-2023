@@ -1,0 +1,29 @@
+Agenda:
+1. Recap of Rest API using Flask
+2. End to end implementation (React and Flask)
+3. Routing
+4. UseContext hook
+
+Rest API
+1. Created a database using sqlite
+2. Created user table programatically
+3. Rest API for following actions
+POST
+GET
+PUT
+DELETE
+Postman
+
+1. create product table
+code int primary key auto increment
+name text
+desc text
+supplier text
+price int
+2. Insert 5 records
+3. Develop following restful api
+api/product - post
+api/product - get (getting all records)
+api/product/<code> - getting a specific product
+api/product put method to update a product
+api/product/<code> delete a specific product
