@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState, createContext, useContext } from "react";
+import Employee from './components/Employee';
 
 const UserContext = createContext();
-
+/** 
 function App() {
   const [user, setUser] = useState("Jesse Hall");
   return (
@@ -55,4 +56,24 @@ function Component5() {
     </>
   );
 }
+**/
+
+function App() {
+    const [employees,setEmployees]=useState([])
+
+    const saveEmployeeHandler=(code,name,dept,sal)=>{
+        let emp = {code:code,name:name,dept:dept,sal:sal}
+        console.log("emp #",emp)
+        setEmployees([...employees,emp])
+        console.log('employees ##',employees)    
+    
+      }
+
+    return (
+        <>
+          <Employee saveEmployee={saveEmployeeHandler} empdata={employees}/>
+        </>
+      );
+}
+
 export default App;
