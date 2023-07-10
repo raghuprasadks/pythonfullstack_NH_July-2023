@@ -1,69 +1,58 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
-import Content from './components/Content';
-import Footer from './components/Footer';
-import Customer from './components/Customer';
-import Users from './components/Users';
-import CovidDashboard from './components/CovidDashboard';
-import SimpleInterest from './components/SimpleInterest';
-import UseEffectDemo from './components/UseEffectDemo';
-import PostAPI from './components/PostAPI';
-import EmployeeMaster from './components/EmployeeMaster';
-import UserManagement from './components/UserManagement';
-import ProductMaster from './components/ProductMaster';
+import { useState, createContext, useContext } from "react";
+
+const UserContext = createContext();
 
 function App() {
-  let course = "html,css,java script"
-  let courses = ["html","css","java script"]
-  const customers=[
-    {
-        id:1,
-        name:'Balaji',
-        location:'Chennai'
-    },
-    {
-        id:2,
-        name:'Pawar',
-        location:'Mumbai'
-    },
-    {
-        id:3,
-        name:'Himanth Biswa Sarma',
-        location:'Gauhati'
-    },
-    {
-        id:4,
-        name:'Ajith Singh',
-        location:'Chandigarh'
-    }
-
-]
+  const [user, setUser] = useState("Jesse Hall");
   return (
-    <div className="App">
-      {/**
-      <h1>Welcome to React</h1>
-      <h2>I am learning react</h2>
-      <h2>I have learnt {courses.length} i,e {course}</h2>
-      <Content/>
-      <Users/>
-      <Header/>      
-      <Customer/>
-      
-      <Footer></Footer>
-      <CovidDashboard/>
-      <SimpleInterest/>
-       <UseEffectDemo/>
-       <PostAPI/> 
-       <EmployeeMaster/> 
-       <Customer custlist={customers}></Customer>
-       <UserManagement/>  
-       */}
-          <ProductMaster/>
-                  
-      
+    
+    <div>
+      <UserContext.Provider value={user}>
+      <h1>{`Hello ${user}!`}</h1>
+      <Component2 info={user}></Component2>
+      </UserContext.Provider>
     </div>
   );
 }
 
+function Component2(props) {
+ let name = props.info
+  return (
+    <>
+      <h1>{name}</h1>
+      <h1>Component 2</h1>
+      <Component3 />
+    </>
+  );
+}
+function Component3() {
+  return (
+    <>
+      <h1>Component 3</h1>
+      <Component4 />
+    </>
+  );
+}
+
+function Component4() {
+  return (
+    <>
+      <h1>Component 4</h1>
+      <Component5 />
+    </>
+  );
+}
+
+function Component5() {
+  const user = useContext(UserContext);
+
+  return (
+    <>
+      <h1>Component 5</h1>
+      <h2>{`Hello ${user} again!`}</h2>
+    </>
+  );
+}
 export default App;

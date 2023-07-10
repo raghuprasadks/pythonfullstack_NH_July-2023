@@ -1,0 +1,8 @@
+Agenda:
+
+1. UseContext
+2. Class based component
+3. Communitation from child to parent
+4. Feedback
+5. MCQ Test
+6. Programming Test
