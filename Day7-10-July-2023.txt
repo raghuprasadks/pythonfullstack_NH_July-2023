@@ -5,4 +5,4 @@ Agenda:
 3. Communitation from child to parent
 4. Feedback - https://forms.gle/4V1cpBksp1NnxWje7
 5. MCQ Test - https://forms.gle/EEaL9qboM6uX1NB86
-6. Programming Test
+6. Programming Test - Refer to programmingtest folder
