@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState, createContext, useContext } from "react";
 import Employee from './components/Employee';
+import Car from './components/CarClass';
 
 const UserContext = createContext();
 /** 
@@ -72,6 +73,7 @@ function App() {
     return (
         <>
           <Employee saveEmployee={saveEmployeeHandler} empdata={employees}/>
+         <Car/>
         </>
       );
 }
